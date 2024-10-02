@@ -1,7 +1,14 @@
 import './bootstrap';
 
-import Alpine from 'alpinejs';
+import Alpine from 'alpinejs'
+import persist from '@alpinejs/persist'
+import intersect from '@alpinejs/intersect'
+import collapse from '@alpinejs/collapse'
 
-window.Alpine = Alpine;
+window.Alpine = Alpine
+ 
+Alpine.plugin(collapse)
+Alpine.plugin(intersect)
+Alpine.plugin(persist)
 
-Alpine.start();
+Alpine.start()
