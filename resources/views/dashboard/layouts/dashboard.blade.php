@@ -16,11 +16,9 @@
     <div class="bg-gradient-to-tr from-purple-600 via-transparent to-slate-500 p-px">
         <div class="bg-white  dark:bg-slate-900">
             <div class="bg-gradient-to-tl from-blue-600/[.05] via-transparent to-purple-400/[.05] dark:from-blue-600/[.1] dark:to-purple-400/[.1]">
-            <header class="w-full px-3 antialiased lg:px-6 bg-white dark:bg-slate-800">
-            <div class="mx-auto max-w-7xl">
-
-                <!-- <header class="sticky top-0 inset-x-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-[48] w-full text-sm py-2.5 sm:py-4 lg:ps-64"> -->
-                    @include('dashboard.layouts.navbar')
+                <header class="w-full px-3 antialiased lg:px-6 bg-white dark:bg-slate-800">
+                    <div class="mx-auto max-w-7xl">
+                        @include('dashboard.layouts.navbar')
                     </div>
                 </header>
             </div>
@@ -30,20 +28,17 @@
     @include('dashboard.layouts.sidebar')
 
     @if (isset($header))
-    <header class="w-full px-3 antialiased lg:px-6 bg-white dark:bg-slate-800">
-    <!-- <div class="mx-auto max-w-7xl"> -->
+    <header class="w-full px-3 antialiased lg:px-6">
         <div class="max-w-7xl mx-auto py-20 px-4 sm:px-4 lg:px-4">
-
             {{ $header }}
         </div>
     </header>
     @endif
 
-    <main class="w-full h-screen pt-10 pb-32 px-4 sm:px-6 md:px-8 lg:ps-72 bg-slate-100 dark:bg-slate-800">
+    <main class="w-full h-screen pt-10 pb-32 px-4 sm:px-6 md:px-8 lg:ps-72">
         {{ $slot }}
     </main>
     @stack('scripts')
-    @include('sweetalert::alert')
     <div class="fixed bottom-4 right-4 transition duration-300 ">
         <x-theme-toggle />
     </div>
