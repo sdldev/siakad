@@ -1,4 +1,6 @@
 <x-home-layout>
+@include('hero')
+
     <section class="py-6 sm:py-6">
         <div class="container px-6 py-32 mx-auto md:text-center md:px-4" x-data="{ show: false }" x-intersect="show = true">
             <h1 class="text-4xl font-extrabold leading-none tracking-tight  sm:text-5xl md:text-6xl xl:text-7xl">
@@ -41,5 +43,5 @@
             </div>
         </div>
     </section>
-    <!-- @include('blog') -->
+    @include('blog')
 </x-home-layout>

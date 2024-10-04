@@ -35,7 +35,7 @@
     </header>
     @endif
 
-    <main class="w-full h-screen pt-10 pb-32 px-4 sm:px-6 md:px-8 lg:ps-72">
+    <main class="w-full h-screen pt-6 pb-32 px-4 sm:px-6 md:px-8 lg:ps-72">
         {{ $slot }}
     </main>
     @stack('scripts')

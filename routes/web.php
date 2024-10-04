@@ -10,6 +10,9 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 Route::prefix('dashboard')->group(function () {
     Route::group(['middleware' => 'auth'], function () {
+        
+        Route::resource('/categories', \App\Http\Controllers\Dashboard\CategoryController::class);
+        Route::resource('/posts', \App\Http\Controllers\Dashboard\PostController::class);
 
     });
 });

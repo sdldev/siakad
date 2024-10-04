@@ -70,3 +70,9 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+
+img.imagePreview {
+  max-width: 300px;
+  max-height: 300px;
+}
+
