@@ -20,7 +20,6 @@
                 </div>
             </div>
         </div>
-
         <div class=" grid grid-cols-12 pb-10 sm:px-5 gap-x-8 gap-y-16">
             @foreach ($blogs as $var )
             <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
@@ -35,8 +34,6 @@
                 <p class="pt-2 text-xs font-medium"><a href="#_" class="mr-1 underline">{{ $var->user->name }}</a> · <span class="mx-1">{{$var->created_at}}</span> · <span class="mx-1 text-gray-600">{{$var->viewer }} read</span></p>
             </div>
             @endforeach
-
         </div>
-
     </div>
 </section>

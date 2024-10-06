@@ -1,46 +1,34 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>Dashboard</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        {{ config('app.name', 'Laravel') }}
+    </title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @stack('style')
-
 </head>
 
-<body x-data="{darkMode: $persist(false)}" :class="{'dark': darkMode === true }" class="font-sans antialiased">
-    <div class="bg-gradient-to-tr from-purple-600 via-transparent to-slate-500 p-px">
-        <div class="bg-white  dark:bg-slate-900">
-            <div class="bg-gradient-to-tl from-blue-600/[.05] via-transparent to-purple-400/[.05] dark:from-blue-600/[.1] dark:to-purple-400/[.1]">
-                <header class="w-full px-3 antialiased lg:px-6 bg-white dark:bg-slate-800">
-                    <div class="mx-auto max-w-7xl">
-                        @include('dashboard.layouts.navbar')
-                    </div>
-                </header>
-            </div>
+<body x-data="{ 'loaded': true, 'darkMode': true, 'stickyMenu': false, 'sidebarToggle': false, 'scrollTop': false }" x-init="darkMode = JSON.parse(localStorage.getItem('darkMode'));
+$watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))" :class="{ 'dark text-bodydark bg-boxdark-2': darkMode === true }">
+
+    <div x-show="loaded" x-init="window.addEventListener('DOMContentLoaded', () => { setTimeout(() => loaded = false, 500) })"
+        class="fixed top-0 left-0 flex items-center justify-center w-screen h-screen  z-999999">
+        <div class="w-16 h-16 border-4 border-solid rounded-full animate-spin border-primary border-t-transparent">
         </div>
     </div>
-
-    @include('dashboard.layouts.sidebar')
-
-    @if (isset($header))
-    <header class="w-full px-3 antialiased lg:px-6">
-        <div class="max-w-7xl mx-auto py-20 px-4 sm:px-4 lg:px-4">
-            {{ $header }}
+    <div class="min-h-screen">
+        <div class="flex h-screen overflow-hidden">
+            @include('dashboard.layouts.sidebar')
+            <div class="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
+                @include('dashboard.layouts.header')
+                <main>
+                    {{ $slot }}
+                </main>
+            </div>
         </div>
-    </header>
-    @endif
-
-    <main class="w-full h-screen pt-6 pb-32 px-4 sm:px-6 md:px-8 lg:ps-72">
-        {{ $slot }}
-    </main>
-    @stack('scripts')
-    <div class="fixed bottom-4 right-4 transition duration-300 ">
-        <x-theme-toggle />
     </div>
 </body>
 

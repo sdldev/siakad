@@ -4,19 +4,25 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $recent = Post::with('category')
+        $recents = Post::with('category')
             ->limit(3)
             ->get();
 
-        $blogs = Post::get();
+        $slidecontent = File::get('storage/sliders.json');
+        $sliders = json_decode(json: $slidecontent, associative: true);
+
+        $blogs = Post::all();
         return view('home', [
-            'recent' => $recent,
+            'recents' => $recents,
+            'sliders' => $sliders,
             'blogs' => $blogs,
+
         ]);
     }
 }

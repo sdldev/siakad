@@ -1,6 +1,6 @@
 <section class="w-full px-3 antialiased lg:px-6">
     <div class="mx-auto max-w-7xl">
-        <nav class="flex items-center w-full h-24 select-none" x-data="{ showMenu: false }">
+        <nav class="flex items-center w-full h-18 select-none" x-data="{ showMenu: false }">
             <div class="relative flex flex-wrap items-start justify-between w-full mx-auto font-medium md:items-center md:h-24 md:justify-between">
                 <a href="/" class="flex items-center w-1/4 py-4 pl-6 pr-4 space-x-2 font-extrabold md:py-0">
                     <span class="flex items-center justify-center flex-shrink-0 w-8 h-8 text-gray-900 rounded-full bg-gradient-to-br from-white via-gray-200 to-white">
