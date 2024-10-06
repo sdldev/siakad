@@ -12,13 +12,11 @@
     const editor = Jodit.make('#editor', {  
         events: {  
             change: function (editorInstance) {  
-                // Set nilai dari input tersembunyi ke nilai editor  
                 document.getElementById('hidden-content').value = editorInstance.value;  
             }  
         }  
     });  
 
-    // Inisialisasi editor dengan nilai yang sudah ada jika ada  
     if (document.getElementById('hidden-content').value) {  
         editor.value = document.getElementById('hidden-content').value;  
     }  
