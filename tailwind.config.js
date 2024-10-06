@@ -8,8 +8,7 @@ export default {
         './resources/views/**/*.blade.php',
         './resources/js/**/*.js',
         './resources/css/**/*.css',
-        './node_modules/jsvectormap/dist/css/jsvectormap.css',
-        './node_modules/flatpickr/dist/flatpickr.min.css',
+
     ],
   darkMode: 'class',
   theme: {

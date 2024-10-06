@@ -76,19 +76,16 @@ img.imagePreview {
 }
 
 
-@layer components {
-  /* Add your custom components here */
-}
+
 
 @layer utilities {
-  /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
 
   .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
   }
 
   .chat-height {
@@ -99,7 +96,6 @@ img.imagePreview {
     @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
   }
 
-  /* Add your custom utilities here */
 }
 
 

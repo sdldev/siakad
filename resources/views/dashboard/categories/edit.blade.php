@@ -1,6 +1,6 @@
 <x-dashboard-layout>
-    @include ('dashboard.layouts.breadcumb')
-    <div class="overflow-hidden py-8">
+    @section('title', 'Edit Category')
+    <div class="w-full h-full overflow-x-auto">
         <form method="POST" action="{{ route('categories.update', $category->id) }}">
             @csrf
             @method('put')

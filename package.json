@@ -20,7 +20,6 @@
         "@alpinejs/intersect": "^3.14.1",
         "@alpinejs/persist": "^3.14.1",
         "flatpickr": "^4.6.13",
-        "jodit": "^4.2.27",
-        "jsvectormap": "^1.6.0"
+        "jodit": "^4.2.27"
     }
 }
