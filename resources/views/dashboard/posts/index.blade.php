@@ -1,6 +1,6 @@
 <x-dashboard-layout>
     @section('title', 'Index Post')
-    <div class="w-full h-full overflow-x-auto">
+    <div class="w-full h-full">
         <x-button.create route="posts" />
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">

@@ -8,9 +8,9 @@
     <title>
         {{ config('app.name', 'Laravel') }}
     </title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/admin.js'])
+    
 </head>
-
 <body x-data="{ 'loaded': true, 'darkMode': true, 'stickyMenu': false, 'sidebarToggle': true, 'scrollTop': false }" x-init="darkMode = JSON.parse(localStorage.getItem('darkMode'));
 $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))" :class="{ 'dark text-bodydark bg-boxdark-2': darkMode === true }">
 
@@ -26,15 +26,15 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
             <div class="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
                 @include('dashboard.layouts.header')
                 <main>
-                    <div class="mx-auto h-screen p-4 md:p-6 2xl:p-10 bg-slate-50 dark:bg-slate-800">
+                    <div class="mx-auto min-h-screen p-4 md:p-6 2xl:p-10 bg-slate-50 dark:bg-slate-800">
                     @include ('dashboard.layouts.breadcumb')
                         {{ $slot }}
                     </div>
-
                 </main>
             </div>
         </div>
     </div>
+    @stack('styles')
+    @stack('scripts')
 </body>
-
 </html>

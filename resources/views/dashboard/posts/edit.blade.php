@@ -1,6 +1,6 @@
 <x-dashboard-layout>
     @section('title', 'Edit Post')
-    <div class="max-w-full min-w-full overflow-x-auto">
+    <div class="w-full h-full">
         <div class="flex flex-col border">
             @if (Session::has('errors'))
             <x-slot name="header">
@@ -25,9 +25,7 @@
             @csrf
             @method('put')
             <input type="hidden" name="url" value="{{ url()->previous() }}">
-
-
-
+            <x-form.image-upload label="Upload Gambar" name="image" />
             <x-form.input label="Judul Artikel" title="title" name="title" value="{{ old('title', $post->title) }}" required />
             <x-form.text-editor-edit :post="$post" />
             <x-form.input label="Deskripsi" title="description" name="description" value="{{ old('description', $post->description) }}" required />

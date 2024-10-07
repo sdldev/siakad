@@ -1,6 +1,6 @@
 <x-dashboard-layout>
     @section('title', 'Create Post')
-    <div class="max-w-full min-w-full overflow-x-auto">
+    <div class="w-full h-full">
         <form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data">
             @csrf
             <x-form.image-upload label="Upload Gambar" name="image" />
