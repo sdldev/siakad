@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call(class: CategorySeeder::class);
         $this->call(class: PostSeeder::class);
         $this->call(class: StatusPostSeeder::class);
+        $this->call(class: SliderSeeder::class);
 
         
         // User::factory()->create([

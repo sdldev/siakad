@@ -1,6 +1,5 @@
 <x-home-layout>
+
 @include('hero')
-
-
-<!-- @include('blog') -->
+@include('blog')
 </x-home-layout>
