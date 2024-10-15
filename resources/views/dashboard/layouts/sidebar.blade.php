@@ -61,7 +61,8 @@
     <h3 class="mb-4 ml-4 text-sm">Configs</h3>
     <ul class="mb-6 flex flex-col gap-1.5">
       @foreach ([
-      ['title' => 'Pengaturan', 'route' => 'sliders.index', 'icon' => 'website-icon.svg', 'submenu' => [
+      ['title' => 'Configs', 'route' => 'sliders.index', 'icon' => 'website-icon.svg', 'submenu' => [
+      ['title' => 'Pengaturan', 'route' => 'config.index'],
       ['title' => 'Sliders', 'route' => 'sliders.index'],
       ]]
       ] as $item)
