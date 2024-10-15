@@ -44,7 +44,7 @@
      },    
  }" x-init="loadSliders(); autoplay()" class="relative w-full overflow-hidden">
 
-     <div class="relative min-h-[80svh] w-full">
+     <div class="relative min-h-[90svh] w-full">
          <template x-for="(slide, index) in sliders" :key="index">
              <div x-cloak x-show="currentSlideIndex == index + 1" class="absolute inset-0" x-transition.opacity.duration.1000ms>
                  <div class="lg:px-32 lg:py-14 absolute inset-0 z-10 flex flex-col items-center justify-end gap-2 bg-gradient-to-t from-slate-900/85 to-transparent px-16 py-12 text-center">

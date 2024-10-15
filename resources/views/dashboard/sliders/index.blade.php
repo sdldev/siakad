@@ -1,5 +1,7 @@
 <x-dashboard-layout>
     @section('title', 'Index Sliders')
+    <x-button.create route="sliders" />
+
     <div class="w-full h-full">
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -27,7 +29,7 @@
                         </td>
 
                         <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
-                            <x-button.action route="sliders" :id="$var->id" />
+                            <x-button.edit route="sliders" :id="$var->id" />
                         </td>
                     </tr>
                     @endforeach
