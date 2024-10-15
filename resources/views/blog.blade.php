@@ -4,7 +4,7 @@
         <div class="flex flex-col items-center sm:px-5 md:flex-row">
             <div class="w-full md:w-1/2">
                 <a href="#_" class="block">
-                    <img class="object-cover w-full h-full rounded-lg max-h-64 sm:max-h-96" src="https://cdn.devdojo.com/images/may2021/cupcakes.jpg">
+                    <img class="object-cover w-full h-full rounded-lg max-h-64 sm:max-h-96" src="https://plus.unsplash.com/premium_photo-1677966884071-27ac3e64d888?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
                 </a>
             </div>
             <div class="flex flex-col items-start justify-center w-full h-full py-6 mb-6 md:mb-0 md:w-1/2">
@@ -15,8 +15,8 @@
                         </svg>
                         <span>Featured</span>
                     </div>
-                    <h1 class="text-4xl font-bold leading-none lg:text-5xl xl:text-6xl"><a href="#_">Savory Templates. Sweet Designs.</a></h1>
-                    <p class="pt-2 text-sm font-medium">by <a href="#_" class="mr-1 underline">John Doe</a> · <span class="mx-1">April 23rd, 2021</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
+                    <h1 class="text-4xl font-bold leading-none lg:text-5xl xl:text-6xl"><a href="#_">Dunia Pendidikan Dalam Prespektif Seorang Muslim.</a></h1>
+                    <p class="pt-2 text-sm font-medium">by <a href="#_" class="mr-1 underline">Anggia</a> · <span class="mx-1">April 23rd, 2024</span> · <span class="mx-1 text-gray-600">5 min. read</span></p>
                 </div>
             </div>
         </div>
